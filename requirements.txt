@@ -1,0 +1,10 @@
+streamlit
+numpy==1.18.4
+pandas==1.0.1
+PIL
+random
+string
+hashlib
+os
+cryptography
+urllib3==1.25.10
