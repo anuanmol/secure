@@ -202,13 +202,13 @@ def main():
             st.button('Encrypt')
             key = Fernet.generate_key()
             # k = write_key
-            with open("secret.key","wb") as key_file:
-                key_file.write(key)
+            #with open("secret.key","wb") as key_file:
+            #key_file.write(key)
             
             mes = en.encode()
             f = Fernet(key)
             encrypted = f.encrypt(mes)
-            decrypted = f.decrypt(encrypted)
+            #decrypted = f.decrypt(encrypted)
 
             r7, r8 = st.beta_columns(2)
             with r7:
@@ -226,25 +226,6 @@ def main():
         if ed == "Decrypt":
             st.write("Will be added soon")
         
-        #-------prototype for decryption------
-
-        # ky = st.file_uploader('Upload key')
-        # tx = st.text_input('Enter encrypted message')
-        # # ky = ky.encode()
-        # key = ky.read()
-        # f = Fernet(key)
-        # decrypted = f.decrypt(tx)
-        # # try:
-            
-        # # except ValueError:
-        # #     st.write("Provide input in base64-encoded bytes")
-        # r11, r12 = st.beta_columns(2)
-        # with r11:
-        #     st.subheader("Decrypted message is")
-        # with r12:
-        #     st.write(decrypted)
-
-        #----------prototype ends--------------
 
 if __name__== "__main__":
     main()
