@@ -11,7 +11,7 @@ from cryptography.fernet import Fernet
 
 def main():
 
-    st.title('Secure it')
+    st.title('Secure it !')
     st.write("\n")
     st.write("\n")
 
